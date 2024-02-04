@@ -158,4 +158,4 @@ npm run start
 ```
 
 
-*Nota importante: Debido a una situación familiar delicada, no pude dedicar tiempo al desarollo de la prueba el dia sábado, esto me imposibilitó dedicar tiempo a la creación de pruebas unitarias y a la creación del Swagger. Para compensar un poco la documentación en Swagger, he organizado la colección de Postman que creé para realizar pruebas locales, la exporté y la incluyo acá, allí está una breve documentación. Y en cuanto a la realización de las pruebas, puedo asegurar que poseo conocimiento en ellas y he trabajado con jest y supertest*
+*Nota importante: Debido a una situación familiar delicada, no pude dedicar tiempo al desarollo de la prueba el dia sábado, esto me imposibilitó dedicar tiempo a la creación de pruebas unitarias y a la creación del Swagger. Para compensar un poco la documentación en Swagger, he organizado la colección de Postman que creé para realizar pruebas locales, la exporté y la incluyo acá, allí está una breve documentación. Y en cuanto a la realización de las pruebas, puedo garantizar que poseo conocimiento en la escritura de las mismas puesto que he trabajado previamente con jest y supertest*
