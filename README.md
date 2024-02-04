@@ -16,11 +16,11 @@ En el presente repositorio se encuentra la API-REST solicitada para la gestión 
 
 
 
-### Rutas implementadas
+### Rutas implementadas:
 
-* Usuario
+## Usuario
 
-```
+
 Registrar Usuario: POST 
 - http://localhost:5000/api/auth/register
  
@@ -38,36 +38,95 @@ Obtener usuario por Id: GET
 
 Obtener usuario por username: GET
 - http://localhost:5000/api/user/:username
-```
 
 
-* Videos
 
-```
+## Videos
+
+
 Crear video: POST 
 - http://localhost:5000/api/video
 - Autenticación requerida
 
+```
+BODY: {
+    "owner": "owner/userId",
+    "video_name": "nombre de video, no puede ser vacío",
+    "privacy": "public/private",
+    "file_url": "https://www....",
+    "description": "descripción corta, no puede ser vacía"
+}
+```
+
 Dar LIKE a un video: POST
+
 - http://localhost:5000/api/video/addLike
 - Sin autenticación 
+
+```
+BODY: {
+    "videoId": "VideoId"
+}
+```
 
 Dar DISLIKE a un video: POST
 - http://localhost:5000/api/video/addDislike
 - Sin autenticación 
 
+```
+BODY: {
+    "videoId": "VideoId"
+}
+```
+
 Comentar un video: POST
 - http://localhost:5000/api/video/addComment
 - Sin autenticación 
+
+```
+BODY: {
+    "videoId": "VideoId",
+    "text":"Este es mi comentario"
+}
+```
+
 
 Agregar un colaborador al video: POST
 - http://localhost:5000/api/video/:USER_ID
 * Autenticación requerida (se valida que el usuario que hace la petición sea el dueño del video)
 
+```
+BODY: {
+    "videoId": "VideoId",
+    "userId": "usercolaboratorId"
+}
+```
+
 Modificar datos de un video: PATCH
 - http://localhost:5000/api/video/
 * Autenticación requerida (se valida que no se puedan modificar de esta forma, los likes, dislikes, comentarios, comentarios y colaboradores) 
 
+```
+BODY: {
+    "videoId": "",
+    "owner": "owner/userId",
+    "video_name": "Nombre de video",
+    "privacy": "public/private",
+    "file_url": "https://www.youtube.com/watch?v=P7iC-fbdKmQ&t=597s",
+    "description": "Nueva descripción",
+}
+```
+
+
+Eliminar un video: DELETE
+- http://localhost:5000/api/video/
+* Autenticación requerida
+
+```
+BODY: {
+    "videoId": "65bfb5d2dd713aaf13f5df75"
+}
+```
 
 Obener el Top 10 de videos (con más likes): GET
 - http://localhost:5000/api/video/top
@@ -83,13 +142,9 @@ Obener todos los videos de un usuario: GET
 - http://localhost:5000/api/video/:USER_ID
 * Autenticación requerida 
 
-Eliminar un video: DELETE
-- http://localhost:5000/api/video/
-* Autenticación requerida
 
-```
 
-Abrir la carpeta y en una terminal ejecutar:
+## Abrir la carpeta y en una terminal ejecutar:
 
 
 ```
