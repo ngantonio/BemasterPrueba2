@@ -1,0 +1,489 @@
+{
+	"info": {
+		"_postman_id": "f2081693-4e27-43e5-9378-afc6ba6afecc",
+		"name": "BeMaster_Gabriel_Prueba2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30345135"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Register User",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"Camilo@test.com\",\n    \"username\": \"camilo123\",\n    \"password\": \"12345678\",\n    \"name\": \"Camilo\",\n    \"last_name\": \"Reyes\",\n    \"country\":\"Colombia\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/auth/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"userTest@test.com\",\n    \"password\":\"12345678\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/auth/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get User",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/user/65bfb10f9a022eb43b41bd9f",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"user",
+								"65bfb10f9a022eb43b41bd9f"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get user by username",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/user/username/testuser",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"user",
+								"username",
+								"testuser"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update User",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"userId\": \"65bfafa7ccb5dcd5dcc195f7\",\n    \"name\": \"Jhon\",\n    \"last_name\": \"Doe\",\n    \"country\":\"Mexico\",\n    \"email\": \"titopuente@gmail.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/user",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete User",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"userId\": \"65bfafa7ccb5dcd5dcc195f7\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/user",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"user"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Videos",
+			"item": [
+				{
+					"name": "Create new video",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"owner\": \"65bfb10f9a022eb43b41bd9f\",\n    \"video_name\": \"¿Por qué la ansiedad es cada vez más común?\",\n    \"privacy\": \"public\",\n    \"file_url\": \"https://www.youtube.com/watch?v=vKzLSgSI5Rk\",\n    \"description\": \"Video sobre la ansiedad\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/video",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"video"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Like Video",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"videoId\": \"65bfb2f8a677c3f3f2bc7941\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/video/addLike",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"video",
+								"addLike"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add comment",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"videoId\": \"65bfb2f8a677c3f3f2bc7941\",\n    \"text\":\"A mi tambien me ayudo, soy un usuario anonimo sin logearse\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/video/addComment",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"video",
+								"addComment"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add colaborator",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"videoId\": \"65bfb2f8a677c3f3f2bc7941\",\n    \"userId\": \"65bfea888f82cb29bf9418b8\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/video/addColaborator",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"video",
+								"addColaborator"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Dislike Video",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"videoId\": \"65bfb2f8a677c3f3f2bc7941\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/video/addDislike",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"video",
+								"addDislike"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Video",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/video/65bfbcbdc3ec2fae4231ba8e",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"video",
+								"65bfbcbdc3ec2fae4231ba8e"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get videos By User Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/video/getVideosByUser/65bfb10f9a022eb43b41bd9f",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"video",
+								"getVideosByUser",
+								"65bfb10f9a022eb43b41bd9f"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Top 10 videos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/video/top",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"video",
+								"top"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete video",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"videoId\": \"65bfb5d2dd713aaf13f5df75\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/video/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"video",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update VIdeo",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"videoId\": \"65bfbcbdc3ec2fae4231ba8e\",\n    \"owner\": \"65bfb10f9a022eb43b41bd9f\",\n    \"video_name\": \"¿Por qué tenemos 12 notas musicales? | Música y matemáticas - MDIFICADO\",\n    \"privacy\": \"public\",\n    \"file_url\": \"https://www.youtube.com/watch?v=P7iC-fbdKmQ&t=597s\",\n    \"description\": \"Video sobre las notas musicales - MODIFICADO\",\n    \"comment_count\": 10,\n    \"like_count\": 50,\n    \"dislike_count\": 200\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/video",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"video"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1YmZiMTBmOWEwMjJlYjQzYjQxYmQ5ZiIsInR5cGUiOiJ0ZXN0dXNlciIsImVtYWlsIjoidXNlclRlc3RAdGVzdC5jb20iLCJpYXQiOjE3MDcwNzc2MzksImV4cCI6MTcwNzE2NDAzOX0.O6VYSe_PFWj6IxkFKmGrZ2TjvRis21uY2Y5ZYSDtOak",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
