@@ -5,7 +5,7 @@ En el presente repositorio se encuentra la API-REST solicitada para la gestión 
 
 ### Desarrollo
 
-> Se presenta una API-REST **con autenticación mediante JWT utilizando passport.js** como middleware. Con MongoDB como base de datos no-Sql, para alamacenar los datos de usuarios y videos. Asi mismo, se han cumplido todas las historias de usuario descritas en el PDF enviado, con un enfoque minimo con respecto a la creatividad para crear nuevas propiedades, rutas y funcionalidades, en el sentido de que un proyecto así puede ser apasionante si se le da rienda suelta a la creatividad, pero para ello el tiempo es necesario.
+> Se presenta una API-REST **con autenticación mediante JWT utilizando passport.js** como middleware. Con MongoDB como base de datos no-Sql, para alamacenar los datos de usuarios y videos. Asi mismo, se han cumplido todas las historias de usuario descritas en el PDF enviado. He tenido las ganas de extenderme mucho más a través de la construcción de mas endpoints y propiedades pero el tiempo apremia un poco.
 
 > Se ha hecho énfasis principalmente en la validación de los datos de entrada y respuestas para cada endpoint, **se utiliza express-validator** para validar los datos de entrada y logica de programación adicional para validar ciertos casos que requieren respuestas especificas.
 
