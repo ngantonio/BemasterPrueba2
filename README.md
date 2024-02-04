@@ -104,7 +104,7 @@ BODY: {
 
 Modificar datos de un video: PATCH
 - http://localhost:5000/api/video/
-* Autenticación requerida (se valida que no se puedan modificar de esta forma, los likes, dislikes, comentarios, comentarios y colaboradores) 
+* Autenticación requerida (se valida que no se puedan modificar de esta forma, los likes, dislikes, comentarios y colaboradores) 
 
 ```
 BODY: {
@@ -128,17 +128,17 @@ BODY: {
 }
 ```
 
-Obener el Top 10 de videos (con más likes): GET
+Obtener el Top 10 de videos (con más likes): GET
 - http://localhost:5000/api/video/top
 * Si el usuario está autenticado, regresa videos públicos y privados, si no hay autenticación se regresan solo los videos públicos
 
 
-Obener video por Id: GET
+Obtener video por Id: GET
 - http://localhost:5000/api/video/:ID
 * Si el usuario está autenticado y el video es privado, regresa su info, si no está autenticado, regresa un 401, 
 
 
-Obener todos los videos de un usuario: GET
+Obtener todos los videos de un usuario: GET
 - http://localhost:5000/api/video/:USER_ID
 * Autenticación requerida 
 
