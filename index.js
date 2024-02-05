@@ -2,13 +2,10 @@
 import CONFIG from "./src/config/db.js";
 import "dotenv/config";
 import mongoose from "mongoose";
-import router from "./src/routes/index.js";
+
 import createServer from "./server.js";
 
 const api = createServer();
-
-// get Routes
-api.use("/api", router);
 
 /* start mongo*/
 const clientOptions = {

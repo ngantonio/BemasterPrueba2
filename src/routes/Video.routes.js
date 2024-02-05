@@ -9,7 +9,10 @@ import {
 
 import { commentRegisterValidation } from "../validators/comment.js";
 
-import { authorizeVideosJWT, authorizeJWT } from "../controllers/Auth.controller.js";
+import {
+  authorizeVideosJWT,
+  authorizeJWT,
+} from "../controllers/Auth.controller.js";
 
 import {
   createVideo,

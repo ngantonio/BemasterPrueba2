@@ -49,7 +49,7 @@ Crear video: POST
 - Autenticación requerida
 
 ```
-BODY: {
+{
     "owner": "owner/userId",
     "video_name": "nombre de video, no puede ser vacío",
     "privacy": "public/private",
@@ -64,7 +64,7 @@ Dar LIKE a un video: POST
 - Sin autenticación 
 
 ```
-BODY: {
+{
     "videoId": "VideoId"
 }
 ```
@@ -74,7 +74,7 @@ Dar DISLIKE a un video: POST
 - Sin autenticación 
 
 ```
-BODY: {
+{
     "videoId": "VideoId"
 }
 ```
@@ -84,7 +84,7 @@ Comentar un video: POST
 - Sin autenticación 
 
 ```
-BODY: {
+{
     "videoId": "VideoId",
     "text":"Este es mi comentario"
 }
@@ -96,7 +96,7 @@ Agregar un colaborador al video: POST
 * Autenticación requerida (se valida que el usuario que hace la petición sea el dueño del video)
 
 ```
-BODY: {
+{
     "videoId": "VideoId",
     "userId": "usercolaboratorId"
 }
@@ -107,7 +107,7 @@ Modificar datos de un video: PATCH
 * Autenticación requerida (se valida que no se puedan modificar de esta forma, los likes, dislikes, comentarios y colaboradores) 
 
 ```
-BODY: {
+{
     "videoId": "",
     "owner": "owner/userId",
     "video_name": "Nombre de video",
@@ -123,8 +123,8 @@ Eliminar un video: DELETE
 * Autenticación requerida
 
 ```
-BODY: {
-    "videoId": "65bfb5d2dd713aaf13f5df75"
+{
+    "videoId": "VideoId"
 }
 ```
 
@@ -158,4 +158,11 @@ npm run start
 ```
 
 
-*Nota importante: Debido a una situación familiar delicada, no pude dedicar tiempo al desarollo de la prueba el dia sábado, esto me imposibilitó dedicar tiempo a la creación de pruebas unitarias y a la creación del Swagger. Para compensar un poco la documentación en Swagger, he organizado la colección de Postman que creé para realizar pruebas locales, la exporté y la incluyo acá, allí está una breve documentación. Y en cuanto a la realización de las pruebas, puedo garantizar que poseo conocimiento en la escritura de las mismas puesto que he trabajado previamente con jest y supertest*
+## Para ejecutar test
+
+```
+npm test
+```
+
+
+*Nota importante: Debido a una situación familiar complicada, no pude dedicar tiempo al desarollo de la prueba durante uno de los dias requeridos, esto me imposibilitó dedicar tiempo a la creación del Swagger. Para compensar un poco la documentación en Swagger, he organizado la colección de Postman que creé para realizar pruebas locales, la exporté y la incluyo acá.*

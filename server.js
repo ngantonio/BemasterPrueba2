@@ -1,6 +1,7 @@
 import express from "express";
 import cors from "cors";
 import cookieParser from "cookie-parser";
+import router from "./src/routes/index.js";
 
 const createServer = () => {
   const api = express();
@@ -23,6 +24,9 @@ const createServer = () => {
       credentials: true,
     }),
   );
+
+  // get Routes
+  api.use("/api", router);
 
   return api;
 };
